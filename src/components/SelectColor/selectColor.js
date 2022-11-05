@@ -8,8 +8,13 @@ function SelectColor(
     color,
     btnClass,
     setColor,
+    setRgbColor,
+    rgbColor,
   },
 ) {
+  const style = {
+    backgroundColor: rgbColor,
+  };
   return (
     <>
       <select
@@ -17,6 +22,8 @@ function SelectColor(
         defaultValue="Select a color"
         onChange={(event) => {
           setColor(event.target.value);
+          const rgbText = datas.find((data) => data.text === event.target.value);
+          setRgbColor(rgbText.value);
         }}
       >
         {datas.map((data) => (
@@ -26,7 +33,7 @@ function SelectColor(
       <div className="color-picker counter">
         <input type="number" className={btnClass} onClick={(event) => handleColorClick(event)} defaultValue={0} />
       </div>
-      <div className="color-picker color">
+      <div className="color-picker color" style={style}>
         {color !== 'Select a Color' && <p>{color}</p>}
       </div>
     </>
@@ -38,6 +45,8 @@ SelectColor.propTypes = {
   btnClass: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   setColor: PropTypes.func.isRequired,
+  setRgbColor: PropTypes.func.isRequired,
+  rgbColor: PropTypes.string.isRequired,
 };
 
 export default SelectColor;
