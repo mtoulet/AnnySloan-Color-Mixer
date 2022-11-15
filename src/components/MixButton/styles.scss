@@ -1,16 +1,23 @@
+
 .slider-selected-container{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  width: 15%;
+  width: 50%;
   aspect-ratio: 1/1;
-  margin: auto;
+  margin: 2rem auto;
   
 }
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .slider-selected {
    aspect-ratio: 1/1;
-   height: 50%;
+   height: 50px;
    margin: .5rem auto;
    border-radius: 50%;
    border: solid 2px gray;

@@ -11,7 +11,6 @@ function SelectColors(
 ) {
   // rempli le state avec les couleurs selectionnées grace aux cliques (3 couleur max)
   const handleClickColor = (event) => {
-    console.log('jentre dans le switch', event.target.style.backgroundColor);
     if (color.color1 === 'color1') {
       setColor({ color1: event.target.style.backgroundColor, color2: color.color2, color3: color.color3 });
     }
