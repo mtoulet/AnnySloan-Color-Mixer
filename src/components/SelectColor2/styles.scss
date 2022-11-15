@@ -1,0 +1,33 @@
+
+.color-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 60%;
+  margin: auto;
+  justify-content: space-around;
+  gap: 1rem;
+  
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    aspect-ratio: 1/1;
+
+    &__name{
+    text-align: center;
+    height: 10%;
+    }
+
+    &__color{
+    aspect-ratio: 1/1;
+    height: 80%;
+    margin: .5rem auto;
+    border-radius: 50%;
+    border: solid 4px gray;
+    }
+  }
+}
+

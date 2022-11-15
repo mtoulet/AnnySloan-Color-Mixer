@@ -1,5 +1,4 @@
 const data = [
-  { text: 'Select a Color', value: '0' },
   { text: 'Amsterdam Green', value: 'rgb(29,66,48)' },
   { text: 'Antibes Green', value: 'rgb(80,154,79)' },
   { text: 'Antoinette', value: 'rgb(229,196,187)' },

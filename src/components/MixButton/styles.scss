@@ -1,0 +1,17 @@
+.slider-selected-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  
+}
+.slider-selected {
+   aspect-ratio: 1/1;
+   height: 50%;
+   margin: .5rem auto;
+   border-radius: 50%;
+   border: solid 2px gray;
+ }
