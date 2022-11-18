@@ -14,15 +14,13 @@ const colorMixer = (color, colorDose) => {
  + Number(colorDose?.doseColor3);
 
   rawRgbs.forEach((rawRgb) => {
-    red += (Number(rawRgb[0]) * rawRgb[3]);
-    green += (Number(rawRgb[1]) * rawRgb[3]);
-    blue += (Number(rawRgb[2]) * rawRgb[3]);
+    // 0 = red, 1 = green, 2 = blue, 3 = dose
+    if (rawRgb[0] !== '256' && rawRgb[3] !== 0) {
+      red += (Number(rawRgb[0]) * rawRgb[3]);
+      green += (Number(rawRgb[1]) * rawRgb[3]);
+      blue += (Number(rawRgb[2]) * rawRgb[3]);
+    }
   });
-  if (totalDose === 0) {
-    red = 255;
-    green = 255;
-    blue = 255;
-  }
   // else if (rawRgb1[0] !== '256' && rawRgb2[0] !== '256' && rawRgb3[0] !== '256') {
   //   red = Math.floor((
   //     (Number(rawRgb1[0]) * colorDose.doseColor1)
@@ -57,7 +55,7 @@ const colorMixer = (color, colorDose) => {
   // }
 
   const result = `rgb(${red / totalDose}, ${green / totalDose}, ${blue / totalDose})`;
-  return (result);
+  return (totalDose === 0 ? 'rgb(255, 255, 255)' : result);
 };
 
 export default colorMixer;

@@ -84,6 +84,7 @@ function MixButton(
   };
   return (
     <div className="slider-selected-container">
+      {color.color1 !== 'color256' && (
       <div className="slider">
         <img className="slider-delete" src={deleteColor} alt="supprimer la couleur" title="supprimer la couleur" name="delete1" onClick={(event) => handleDeleteColor(event)} />
         <span className="slider-selected" ref={color1} style={{ backgroundColor: color.color1 }} />
@@ -92,6 +93,8 @@ function MixButton(
           <input type="range" min="0" max="5" name="slider1" value={colorDose.doseColor1} onChange={handleColorDoseChange} />
         </label>
       </div>
+      )}
+      {color.color2 !== 'color256' && (
       <div className="slider">
         <img className="slider-delete" src={deleteColor} alt="supprimer la couleur" title="supprimer la couleur" name="delete2" onClick={(event) => handleDeleteColor(event)} />
         <span className="slider-selected" ref={color2} style={{ backgroundColor: color.color2 }} />
@@ -100,6 +103,8 @@ function MixButton(
           <input type="range" min="0" max="5" name="slider2" value={colorDose.doseColor2} onChange={handleColorDoseChange} />
         </label>
       </div>
+      )}
+      {color.color3 !== 'color256' && (
       <div className="slider">
         <img className="slider-delete" src={deleteColor} alt="supprimer la couleur" title="supprimer la couleur" name="delete3" onClick={(event) => handleDeleteColor(event)} />
         <span className="slider-selected" ref={color3} style={{ backgroundColor: color.color3 }} />
@@ -108,6 +113,7 @@ function MixButton(
           <input type="range" min="0" max="5" name="slider3" value={colorDose.doseColor3} onChange={handleColorDoseChange} />
         </label>
       </div>
+      )}
     </div>
   );
 }

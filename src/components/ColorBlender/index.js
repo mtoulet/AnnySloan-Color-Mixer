@@ -10,10 +10,15 @@ import './styles.scss';
 // == Composant
 function ColorBlender() {
   const [color, setColor] = useState({ color1: 'color256', color2: 'color256', color3: 'color256' });
-  const [colorDose, setColorDose] = useState({ doseColor1: 1, doseColor2: 1, doseColor3: 1 });
+  const [colorDose, setColorDose] = useState({ doseColor1: 0, doseColor2: 0, doseColor3: 0 });
   return (
     <div className="ColorBlender">
-      <SelectColor2 color={color} setColor={setColor} />
+      <SelectColor2
+        color={color}
+        setColor={setColor}
+        colorDose={colorDose}
+        setColorDose={setColorDose}
+      />
       <MixButton
         color={color}
         setColor={setColor}
