@@ -1,15 +1,16 @@
 .result{
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: space-between;
 align-items: center;
-width: 15%;
-aspect-ratio: 1/1;
+width: 100%;
 
-  &-color {
-    aspect-ratio: 1/1;
-    height: 80%;
-    margin: .5rem auto;
-    border-radius: 50%;
-    border: solid 4px gray;}
+
+  
 }
+.result-color {
+  aspect-ratio: 1/1;
+  height: 120px;
+  margin: .5rem auto;
+  border-radius: 50%;
+  border: solid 4px gray;}

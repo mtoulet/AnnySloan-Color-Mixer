@@ -11,13 +11,13 @@ function SelectColors(
 ) {
   // rempli le state avec les couleurs selectionnées grace aux cliques (3 couleur max)
   const handleClickColor = (event) => {
-    if (color.color1 === 'color1') {
+    if (color.color1 === 'color256') {
       setColor({ color1: event.target.style.backgroundColor, color2: color.color2, color3: color.color3 });
     }
-    else if (color.color2 === 'color2') {
+    else if (color.color2 === 'color256') {
       setColor({ color1: color.color1, color2: event.target.style.backgroundColor, color3: color.color3 });
     }
-    else if (color.color3 === 'color3') {
+    else if (color.color3 === 'color256') {
       setColor({ color1: color.color1, color2: color.color2, color3: event.target.style.backgroundColor });
     }
     console.log(color);
