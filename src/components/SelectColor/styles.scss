@@ -6,7 +6,7 @@
   max-height: 40%;
   margin: auto;
   justify-content: space-around;
-  gap: 1rem;
+  gap: .3rem;
   
   &-container {
     display: flex;
@@ -15,10 +15,13 @@
     align-items: center;
     width: 7%;
     aspect-ratio: 1/1;
+    min-width:100px;
+    padding: .5rem .3rem;
+    margin: .1rem .1rem;
 
     &__name{
     text-align: center;
-    height: 10%;
+    height: auto;
     }
 
     &__color{
@@ -29,5 +32,12 @@
     box-shadow: 2px 2px 2px black;
     }
   }
+}
+.selected{
+  border: solid 2px #5c5c5c;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e1e1e1, #f0f0f0);
+  box-shadow: 5px 5px 10px #5c5c5c,
+              -5px -5px 10px #ffffff;
 }
 

@@ -29,7 +29,7 @@ function SelectColors(
   };
   return (
     <div className="Color-list">
-      <SelectColor handleClickColor={handleClickColor} />
+      <SelectColor handleClickColor={handleClickColor} color={color} />
     </div>
   );
 }

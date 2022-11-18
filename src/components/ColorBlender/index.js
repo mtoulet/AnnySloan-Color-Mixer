@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import MixButton from 'src/components/MixButton';
 import MixedColor from 'src/components/MixedColor';
-import SelectColor2 from 'src/components/SelectColor2';
 import colorMixer from 'src/components/utils/colorMixer';
+import SelectColors from '../SelectColor';
 import './styles.scss';
 
 // == Composant
@@ -13,7 +13,7 @@ function ColorBlender() {
   const [colorDose, setColorDose] = useState({ doseColor1: 0, doseColor2: 0, doseColor3: 0 });
   return (
     <div className="ColorBlender">
-      <SelectColor2
+      <SelectColors
         color={color}
         setColor={setColor}
         colorDose={colorDose}
